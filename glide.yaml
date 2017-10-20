@@ -1,0 +1,12 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+package: github.com/kkohtaka/cratedb-prometheus-adapter
+import:
+- package: github.com/crate/crate_adapter
+  version: d24e2139a6b28819322fd350b45758ec93ee3e96
+- package: github.com/prometheus/client_golang
+  version: v0.9.0-pre1
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
