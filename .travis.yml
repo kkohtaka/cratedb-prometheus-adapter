@@ -15,10 +15,8 @@ services:
 
 script:
 - docker build --tag quay.io/kkohtaka/cratedb-prometheus-adapter .
-
-after_success:
 - |
   if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login --username="$docker_username" --password="$docker_password";
+    docker login --username="$docker_username" --password="$docker_password" quay.io;
     docker push quay.io/kkohtaka/cratedb-prometheus-adapter;
   fi
