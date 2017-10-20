@@ -5,6 +5,11 @@ sudo: required
 
 language: c
 
+addons:
+  apt:
+    packages:
+    - docker-ce
+
 services:
 - docker
 
